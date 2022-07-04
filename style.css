@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    font-family: 'Roboto';
+    font-style: normal;
+}
+
+header {
+    width: 100%;
+    height: 13rem;
+    
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3.3rem;
+
+    padding-left: 7rem;
+}
+
+nav {
+    display: flex;
+    gap: 3.2rem;
+}
+
+nav a {
+    color: #C4C4CC;
+    font-weight: 400;
+    font-size: 2.2rem;
+    line-height: 2.2rem;
+    text-decoration: none;
+
+    display: flex;
+    gap: 3px;
+}
+
+nav a:hover {
+    font-weight: 700;
+    color: white;
+}
+
+nav a svg {
+    margin: 2px;
+}
+
+.navHide {
+    opacity: 0;
+}
+
+header a svg:hover {
+    animation: rotation 1000ms linear infinite;
+    cursor: pointer;
+}
+@keyframes rotation {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+.home {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.4rem;
+}
+
+.home h1 {
+    margin-top: 17rem;
+
+    color: #E1E1E6;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 125%;
+}
+
+.home a {
+    width: 19.5rem;
+    height: 5rem;
+
+    background-color: transparent;    
+    border: white 2px solid;
+    border-radius: 5px;
+
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: white;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home a:hover {
+    background-color: white;
+    color: #02799D;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.page1 {
+    width: 100%;
+    height: 100vh;
+
+    background-image: url("/images/gifHome.gif");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    position: absolute;
+    z-index: -1;
+}
+
+.page2 {
+    width: 100%;
+    height: 100vh;
+
+    background-image: url("/images/universo.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    position: absolute;
+    z-index: -1;
+}
+
+.page3 {
+    width: 100%;
+    height: 100vh;
+
+    background-image: url("/images/exploracao.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    position: absolute;
+    z-index: -1;
+}
+
+.hide {
+    background-image: none;
+}
+
+.universe, .exploration, .page404 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    color: #E1E1E6;
+    gap: 2rem;
+}
+
+.universe h1, .exploration h1, .page404 h1, .informations h1 {
+    font-weight: 700;
+    font-size: 4.8rem;
+    line-height: 6rem;
+}
+
+.universe p, .exploration p, .page404 p, .informations p {
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 3rem;
+    max-width: 70rem;
+    margin: auto;
+}
